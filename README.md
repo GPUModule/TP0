@@ -14,7 +14,7 @@ Pour y acceder :
 1. Se connecter à un des 3 serveurs ayant une Nvidia P100 : ssh -p 8012 gt-X (X allant de 0 à 3)
 
 ### A propos du code
-Le répertoire comporte 2 fichiers exercice01.cu et exercice02.cu. Ces deux fichiers comporte les instructions que vous devez suivre pour finir le TP.
+Le répertoire comporte 2 fichiers exercice01.cu et exercice02.cu, tout deux contenant les instructions que vous devez suivre pour finir le TP.
 Un makefile est fourni avec le code vous permettant de le compiler et de l'executer. 
 
 Pour compiler un exercice, il vous suffit de changer la ligne suivante par le nom du fichier correspondant:
