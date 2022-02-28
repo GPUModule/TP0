@@ -28,11 +28,11 @@ Le but de cet exercice est double.
 1. Implementer les concepts de base de CUDA vue en CM. 
 2. Avoir un aperçsu de la puissance de calcul du GPU comparés au CPU.
 
-Pour cet exercice, vous allez devoir implementer un opésration de multiplication entre deux matrices.
+Pour cet exercice, vous allez devoir implementer un opération de multiplication entre deux matrices.
 
 ![figure.jpeg](figure.jpeg)
 
-Vous travaillerez avec des matrices carréses, n = p = w = q.
+Vous travaillerez avec des matrices carrées, n = p = w = q.
 
 #### 1ere Partie
 Les matrices sont de taille NxM ou N = M = 16 (definit dans le main)
@@ -44,13 +44,13 @@ Le nombre de threads par blocs est défini à 256, donc les blocs sont de dimens
 4. Completer la fonction MatMulCPU permettant de multiplier deux matrices entre-elles sur CPU
 5. Executer le programme
 
-Une fonction **validate** est implementé permettant de verifier que la sortie du kernel soit la même que la sortie de las fonction CPU sont les mêmesss.
+Une fonction **validate** est implementé permettant de verifier que la sortie du kernel soit la même que la sortie de la fonction CPU.
 
 ### 2eme partie
 
-Mesure des temps d'execution.
+Mesure des temps d'executions.
 
-Une structure permettant de mesurer le temps d'execution d'une partie de code a été implementer dans utils.h
+Une structure permettant de mesurer le temps d'execution d'une partie de code a été implementé dans utils.h
 
 ```c
 struct event_pair{
@@ -73,7 +73,7 @@ Stop timer affichera en sortie le temps d'execution du kernel.
 
 2. Mesurer le temps d'execution de MatMulKernel et MatMulCPU.
 
-Le GPU est-il plus rapide ? A votre avis pourquoi n'y a t-il pas un grand ecart de temps d'execution entre le CPU et le GPU ?
+Le GPU est-il plus rapide ? A votre avis pourquoi n'y a t-il pas un grand écart de temps d'execution entre le CPU et le GPU ?
 
 3. Essayer à nouveau en modifiant un peu le code :
 	1. Changez les valeurs de N et M a 2048
@@ -88,16 +88,16 @@ Un fichier texte a ete encrypte en utilisant l'encryption affine.
 La fonction de decryption affine est defini comme suit :
 ![form2.png](form2.png)
 
-Dans le code, les valeurs de a sont donnee, A = 15, B = 27, M = 128, $A^{-1}$ = 111
-x est un element de notre fichier encrypte.
+Dans le code du programme, A = 15, B = 27, M = 128, A^-1 = 111
+x est un element de notre fichier encrypté.
 
-Il suffit d'appliquer D(x) pour chaque charactere du fichier (liste de 1024 charactere).
-Une fonction est deja ecrite permettant de recuperer le contenu du fichier dans **h_input**.
+Il suffit d'appliquer D(x) pour chaque charactère du fichier (liste de 1024 charactères).
+Une fonction est déjà écrite permettant de récuperer le contenu du fichier dans **h_input**.
 
 1. Completer la fonction main en utilisant un seul bloc de N (1024) threads
-	1. Les etapes a effectuer sont ecrit dans le code.
+	1. Les etapes à éffectuer sont mentionné dans le code.
 2. Completer le kernel **affine_decrypt**
-3. Modifier la fonction main afin d'utiliser 8 bloc
+3. Modifier la fonction main afin d'utiliser un grille de 8 blocs, chaque bloc ayant N/8 threads
 4. Completer le kernel **affine_decrypt_multiblock**
 
 
