@@ -7,14 +7,14 @@ Si vous avez un ordinateur avec un carte graphique nvidia, pour installer CUDA :
 3. [Installer CUDA Toolkit](https://developer.nvidia.com/cuda-downloads)
 
 ### Acceder a un serveur GPU
-Sinon, il y a trois machine a luminy equipees d'une Nvidia Tesla P100.
+Sinon, il y à trois machine a luminy equipées d'une Nvidia Tesla P100.
 Pour y acceder :
 1. Se connecter au sas: ssh -p 8012 -o PreferredAuthentications=password -o PubkeyAuthentication=no [USER@sas.luminy.univ-amu.fr](mailto:USER@sas.luminy.univ-amu.fr)
-    **Attention : IP banni apres trois echecs de connexion**
+    **Attention : IP banni après trois échecs de connexion**
 1. Se connecter à un des 3 serveurs ayant une Nvidia P100 : ssh -p 8012 gt-X (X allant de 0 à 3)
 
 ### A propos du code
-Le repertoire comporte 2 fichiers exercice01.cu et exercice02.cu. C'est deux fichier comporte les instructions que vous devez suivre pour finir le TP.
+Le répertoire comporte 2 fichiers exercice01.cu et exercice02.cu. Ces deux fichiers comporte les instructions que vous devez suivre pour finir le TP.
 Un makefile est fourni avec le code vous permettant de le compiler et de l'executer. 
 
 Pour compiler un exercice, il vous suffit de changer la ligne suivante par le nom du fichier correspondant:
@@ -26,17 +26,17 @@ EXAMPLE=exercise01
 Vous travaillerez sur le fichier exercice01.cu
 Le but de cet exercice est double. 
 1. Implementer les concepts de base de CUDA vue en CM. 
-2. Avoir un apercu de la puissance de calcul du GPU compare au CPU.
+2. Avoir un aperçsu de la puissance de calcul du GPU comparés au CPU.
 
-Pour cet exercice, vous allez devoir implementer un operation de multiplication entre deux matrices.
+Pour cet exercice, vous allez devoir implementer un opésration de multiplication entre deux matrices.
 
-![[1*OD8WI1NpCGQHfMVE1tmIlg.jpeg]]
+![figure.jpeg]
 
-Vous travaillerez avec des matrices carrees, n = p = w = q.
+Vous travaillerez avec des matrices carréses, n = p = w = q.
 
 #### 1ere Partie
 Les matrices sont de taille NxM ou N = M = 16 (definit dans le main)
-Le nombre de threads par blocs est definit a 256, donc les blocs sont de dimensions 16x16. La grille est de dimension N/block_with x M/block_with = 1x1.
+Le nombre de threads par blocs est défini à 256, donc les blocs sont de dimensions 16x16. La grille est de dimension N/block_with x M/block_with = 1x1.
 
 1. Completer la partie Host de programme (main)
 2. Pour les dimensions des grilles et blocs
@@ -44,13 +44,13 @@ Le nombre de threads par blocs est definit a 256, donc les blocs sont de dimensi
 4. Completer la fonction MatMulCPU permettant de multiplier deux matrices entre-elles sur CPU
 5. Executer le programme
 
-Une fonction **validate** est implemente permettant de verifier que le resultat de la multiplication GPU et CPU sont les meme.
+Une fonction **validate** est implementé permettant de verifier que la sortie du kernel soit la même que la sortie de las fonction CPU sont les mêmesss.
 
 ### 2eme partie
 
 Mesure des temps d'execution.
 
-Une structure permettant de mesurer le temps d'execution d'une partie de code a ete implementer dans utils.h
+Une structure permettant de mesurer le temps d'execution d'une partie de code a été implementer dans utils.h
 
 ```c
 struct event_pair{
@@ -73,9 +73,9 @@ Stop timer affichera en sortie le temps d'execution du kernel.
 
 2. Mesurer le temps d'execution de MatMulKernel et MatMulCPU.
 
-Le GPU est-il plus rapide ? A votre avis pourquoi le n'y a t-il pas un grand ecart de temps d'execution entre le CPU et le GPU ?
+Le GPU est-il plus rapide ? A votre avis pourquoi n'y a t-il pas un grand ecart de temps d'execution entre le CPU et le GPU ?
 
-3. Essayer a nouveau en modifiant un peu le code :
+3. Essayer à nouveau en modifiant un peu le code :
 	1. Changez les valeurs de N et M a 2048
 
 Que se passe t'il ?
@@ -83,10 +83,10 @@ Que se passe t'il ?
 ## Exercice 2
 
 Un fichier texte a ete encrypte en utilisant l'encryption affine.
-![[Pasted image 20220228080038.png]]
+![[form1.png]]
 
 La fonction de decryption affine est defini comme suit :
-![[Pasted image 20220228080210.png]]
+![[form2.png]]
 
 Dans le code, les valeurs de a sont donnee, A = 15, B = 27, M = 128, $A^{-1}$ = 111
 x est un element de notre fichier encrypte.
