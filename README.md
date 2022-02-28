@@ -30,7 +30,7 @@ Le but de cet exercice est double.
 
 Pour cet exercice, vous allez devoir implementer un opésration de multiplication entre deux matrices.
 
-![figure.jpeg]
+![figure.jpeg](figure.jpeg)
 
 Vous travaillerez avec des matrices carréses, n = p = w = q.
 
@@ -83,10 +83,10 @@ Que se passe t'il ?
 ## Exercice 2
 
 Un fichier texte a ete encrypte en utilisant l'encryption affine.
-![[form1.png]]
+![form1.png](form1.png)
 
 La fonction de decryption affine est defini comme suit :
-![[form2.png]]
+![form2.png](form2.png)
 
 Dans le code, les valeurs de a sont donnee, A = 15, B = 27, M = 128, $A^{-1}$ = 111
 x est un element de notre fichier encrypte.
