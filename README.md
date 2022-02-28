@@ -23,7 +23,8 @@ EXAMPLE=exercise01
 ```
 
 ### Exercice 1
-Vous travaillerez sur le fichier exercice01.cu
+Vous travaillerez sur le fichier exercice01.cu.
+
 Le but de cet exercice est double. 
 1. Implementer les concepts de base de CUDA vue en CM. 
 2. Avoir un aperçsu de la puissance de calcul du GPU comparés au CPU.
