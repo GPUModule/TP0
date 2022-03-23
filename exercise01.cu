@@ -15,7 +15,6 @@ void random_floats(float *a);
 void MatMulCPU(float *a, float *b, float *c);
 int validate(float *a, float *ref);
 
-
 __global__ void MatMulKernel(float *a, float *b, float *c) {
 	// A completer
 }

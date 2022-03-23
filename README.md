@@ -6,12 +6,6 @@ Si vous avez un ordinateur avec un carte graphique nvidia, pour installer CUDA :
 2. [Guide d'installation de CUDA pour windows](https://docs.nvidia.com/cuda/cuda-installation-guide-microsoft-windows/index.html)
 3. [Installer CUDA Toolkit](https://developer.nvidia.com/cuda-downloads)
 
-### Acceder a un serveur GPU
-Sinon, il y à trois machine a luminy equipées d'une Nvidia Tesla P100.
-Pour y acceder :
-1. Se connecter au sas: ssh -p 8012 -o PreferredAuthentications=password -o PubkeyAuthentication=no [USER@sas.luminy.univ-amu.fr](mailto:USER@sas.luminy.univ-amu.fr)
-    **Attention : IP banni après trois échecs de connexion**
-1. Se connecter à un des 3 serveurs ayant une Nvidia P100 : ssh -p 8012 gt-X (X allant de 0 à 3)
 
 ### A propos du code
 Le répertoire comporte 2 fichiers exercice01.cu et exercice02.cu, tout deux contenant les instructions que vous devez suivre pour finir le TP.
